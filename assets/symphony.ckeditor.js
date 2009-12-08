@@ -2,12 +2,12 @@ jQuery(document).ready(function () {
   
     jQuery('textarea.ckeditor').each(function(index) {
         var objectName = jQuery(this).attr('name');
-                
         jQuery(this).attr('id', objectName);
         
         CKEDITOR.replace( 
             objectName,
             {
+                height: this.offsetHeight,
                 removePlugins : 'font',
                 extraPlugins : 'uicolor',
                 uiColor : '#d6d6c7',
