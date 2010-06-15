@@ -9,8 +9,8 @@
 		public function about() {
 			return array(
 				'name' => 'Text Formatter: CKEditor',
-				'version' => '0.6',
-				'release-date' => '2009-12-08',
+				'version' => '0.7',
+				'release-date' => '2010-06-15',
 				'author' => array(
 					'name' => 'Tony Arnold',
 					'website' => 'http://thecocoabots.com',
@@ -39,14 +39,18 @@
 		/**
 		 * Load and apply CKEditor
 		 */
+		 
+ 		protected $addedCKEditorHeaders = false;
 	
-		public function applyCKEditor($context){
-			if($context['field']->get('formatter') != 'ckeditor') return;
-			if(!defined('_CKEDITOR_SCRIPTS_IN_HEAD_') || !_CKEDITOR_SCRIPTS_IN_HEAD_){
-				define_safe('_CKEDITOR_SCRIPTS_IN_HEAD_', true);
+		public function applyCKEditor($context) {		
+			if($context['field']->get('text_formatter') != 'ckeditor') return;
+			
+			if(!$this->addedCKEditorHeaders){
 				Administration::instance()->Page->addScriptToHead(URL . '/extensions/ckeditor/lib/ckeditor/ckeditor.js', 200, false);
 				Administration::instance()->Page->addScriptToHead(URL . '/extensions/ckeditor/assets/symphony.ckeditor.js', 210, false);
 				Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/ckeditor/assets/symphony.ckeditor.css', 'screen', 30);
+				
+				$this->addedCKEditorHeaders = true;
 			}
 		}
 				
