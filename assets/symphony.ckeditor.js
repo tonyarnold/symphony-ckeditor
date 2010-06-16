@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
     var count = 0;
     
-    jQuery('textarea.ckeditor').each(function(index) {
+    jQuery('.formatter\\.ckeditor').each(function(index) {
         var objectName = jQuery(this).attr('name');    
         var configurationData = {
             height : this.offsetHeight,

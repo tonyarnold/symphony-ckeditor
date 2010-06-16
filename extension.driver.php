@@ -1,22 +1,26 @@
 <?php
 
-	Class extension_ckeditor extends Extension{
+	Class extension_CKEditor implements iExtension {
 	
 		/**
 		 * Extension information
 		 */
 		 
 		public function about() {
-			return array(
-				'name' => 'Text Formatter: CKEditor',
-				'version' => '0.7',
-				'release-date' => '2010-06-15',
-				'author' => array(
+			return (object)array(
+				'name' => 'CKEditor',
+				'version' => '0.8',
+				'release-date' => '2010-06-16',
+				'author' => (object)array(
 					'name' => 'Tony Arnold',
 					'website' => 'http://thecocoabots.com',
 					'email' => 'tony@thecocoabots.com'
 				),
-				'description' => 'Includes CKEditor, a web-based XHTML editor developed by Frederico Knabben.'
+				'description' => 'Includes CKEditor, a web-based XHTML editor developed by Frederico Knabben.',
+				'type' => array(
+				  'Text Formatter', 
+				  'WYSIWYG'
+				)
 			);
 		}
 	
@@ -26,11 +30,11 @@
 	
 		public function getSubscribedDelegates(){
 			return array(
-				array('page'			=>	'/backend/',
+				array('page'			=>	'/administration/',
 							'delegate'	=>	'ModifyTextareaFieldPublishWidget',
 							'callback'	=>	'applyCKEditor'),
 				      
-				array('page'			=>	'/backend/',
+				array('page'			=>	'/administration/',
 							'delegate'	=>	'ModifyTextBoxFullFieldPublishWidget',
 							'callback'	=>	'applyCKEditor'),
 			);
@@ -40,20 +44,36 @@
 		 * Load and apply CKEditor
 		 */
 		 
- 		protected $addedCKEditorHeaders = false;
 	
-		public function applyCKEditor($context) {		
-			if($context['field']->get('text_formatter') != 'ckeditor') return;
+		public function applyCKEditor(array $context=NULL) {				
+			if($context['field']->{'text-formatter'} != 'formatter.ckeditor') return;
 			
-			if(!$this->addedCKEditorHeaders){
-				Administration::instance()->Page->addScriptToHead(URL . '/extensions/ckeditor/lib/ckeditor/ckeditor.js', 200, false);
-				Administration::instance()->Page->addScriptToHead(URL . '/extensions/ckeditor/assets/symphony.ckeditor.js', 210, false);
-				Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/ckeditor/assets/symphony.ckeditor.css', 'screen', 30);
-				
-				$this->addedCKEditorHeaders = true;
+		  $page = Administration::instance()->Page;
+		  
+		  $ckeditor_js_url = URL . '/extensions/formatter_ckeditor/lib/ckeditor/ckeditor.js';
+		  $sym_ckeditor_js_url = URL . '/extensions/formatter_ckeditor/assets/symphony.ckeditor.js';
+		  $sym_ckeditor_css_url = URL . '/extensions/formatter_ckeditor/assets/symphony.ckeditor.css';
+		  
+	  	if($page->isElementInHead('script', 'src', $ckeditor_js_url) == false) {
+			  $page->insertNodeIntoHead(
+			  	$page->createScriptElement($ckeditor_js_url), 200
+			  );
+		  }
+		  
+	  	if($page->isElementInHead('script', 'src', $sym_ckeditor_js_url) == false) {
+			  $page->insertNodeIntoHead(
+			  	$page->createScriptElement($sym_ckeditor_js_url), 210
+			  );
 			}
+		  
+	  	if($page->isElementInHead('link', 'href', $sym_ckeditor_css_url) == false) {
+			  $page->insertNodeIntoHead(
+			  	$page->createStylesheetElement($sym_ckeditor_css_url), 'screen'
+			  );
+		  }
 		}
 				
 	}
-
-?>
+	
+	return "extension_CKEditor";
+	
