@@ -9,8 +9,8 @@
 		public function about() {
 			return array(
 				'name' => 'Text Formatter: CKEditor',
-				'version' => '0.7',
-				'release-date' => '2010-06-15',
+				'version' => '0.71',
+				'release-date' => '2010-06-26',
 				'author' => array(
 					'name' => 'Tony Arnold',
 					'website' => 'http://thecocoabots.com',
@@ -43,7 +43,7 @@
  		protected $addedCKEditorHeaders = false;
 	
 		public function applyCKEditor($context) {		
-			if($context['field']->get('text_formatter') != 'ckeditor') return;
+			if($context['field']->get('formatter') != 'ckeditor') return;
 			
 			if(!$this->addedCKEditorHeaders){
 				Administration::instance()->Page->addScriptToHead(URL . '/extensions/ckeditor/lib/ckeditor/ckeditor.js', 200, false);

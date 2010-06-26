@@ -1,10 +1,10 @@
 # CKEditor for Symphony CMS (EXPERIMENTAL)
 
-- Version: 0.7 beta
-- Date: Tuesday, 15 June 2010
+- Version: 0.71 beta
+- Date: Tuesday, 26 June 2010
 - Author: Tony Arnold, tony@tonyarnold.com
 - Repository: <http://github.com/tonyarnold/symphony-ckeditor/>
-- Requirements: Symphony CMS 2.0.6 or newer, <http://github.com/symphony/symphony-2/tree/master> - Symphony 2.0.8 recommended.
+- Requirements: Symphony CMS 2.0.8 <http://github.com/symphony/symphony-2/tree/master>
 
 ## Introduction
 
