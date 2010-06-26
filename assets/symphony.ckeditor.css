@@ -1,5 +1,5 @@
 /* @override http://tonyarnold.local/extensions/ckeditor/assets/symphony.ckeditor.css */
 
-label span {
+label div.cke_toolbox span {
 	display:inline;
 }

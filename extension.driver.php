@@ -9,8 +9,8 @@
 		public function about() {
 			return (object)array(
 				'name' => 'CKEditor',
-				'version' => '0.8',
-				'release-date' => '2010-06-16',
+				'version' => '0.81',
+				'release-date' => '2010-06-26',
 				'author' => (object)array(
 					'name' => 'Tony Arnold',
 					'website' => 'http://thecocoabots.com',
