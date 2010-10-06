@@ -1,12 +1,12 @@
 jQuery(document).ready(function () {
     var count = 0;
     
-    jQuery('textarea.ckeditor').each(function(index) {
+    jQuery('label > textarea.ckeditor').each(function(index) {
         var objectName = jQuery(this).attr('name');    
         var configurationData = {
             height : this.offsetHeight,
             extraPlugins : 'uicolor,xmlentities',
-            removePlugins : 'font,entities',
+            removePlugins : 'font,entities,styles',
             uiColor : '#d6d6c7',
             startupOutlineBlocks : true,
             replaceByClassEnabled : false,
@@ -22,6 +22,7 @@ jQuery(document).ready(function () {
             ],
             forcePasteAsPlainText: true
         };
+        CKEDITOR.replaceByClassEnabled = false;
         CKEDITOR.replace(objectName, configurationData);
     });
 });
