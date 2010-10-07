@@ -1,13 +1,43 @@
-# CKEditor for Symphony CMS (EXPERIMENTAL)
+# CKEditor for Symphony CMS
 
-- Version: 0.71 beta
-- Date: Tuesday, 26 June 2010
-- Author: Tony Arnold, tony@tonyarnold.com
-- Repository: <http://github.com/tonyarnold/symphony-ckeditor/>
-- Requirements: Symphony CMS 2.0.8 <http://github.com/symphony/symphony-2/tree/master>
+ * Version: 1.00 beta
+ * CKEditor version: 3.4.1
+ * Date: 07-10-2010
+ * Authors: Tony Arnold <tony@tonyarnold.com>, Giel Berkers <info@gielberkers.com>
+ * Repository: <http://github.com/tonyarnold/symphony-ckeditor/>, <http://github.com/kanduvisla/symphony-ckeditor/>
+ * Requirements: Symphony CMS 2.0.8 <http://github.com/symphony/symphony-2/tree/master>
 
 ## Introduction
 
-This extension provides [CKEditor](http://ckeditor.com/) as text-formatter for Symphony CMS. For further information about the editor please visit [www.ckeditor.com](http://ckeditor.com/).
+This extension provides [CKEditor](http://ckeditor.com/) as text-formatter for Symphony CMS. It also has an integrated file browser which uses Symphony sections to get it's files from.
+For further information about the editor please visit [www.ckeditor.com](http://ckeditor.com/).
 
 It is based upon code found in [Nils H&ouml;rrmann's WYMEditor](http://github.com/nilshoerrmann/wymeditor).
+
+## Special notes
+
+The version of CKEditor is stripped down to the bare essentials. This means:
+
+ * Text formatting is limited to the following functionality:
+   * Paragraph Format
+   * Bold
+   * Italic
+   * Strike-through
+   * Subscript / Superscript
+   * Ordered list / Unordered list
+   * Indent / Outdent
+   * Block quote
+   * Hyperlinks
+   * Horizontal rule
+   * View source
+   * Full screen
+ * **All other plugins are removed!**; if you wish to make use of more functionality, download the original version of [CKEditor](http://ckeditor.com) and extract the plugins needed from their package.
+ * **All languages other then English are removed!**; if you wish to have additional languages, download the original version of [CKEditor](http://ckeditor.com) and extract the languages needed from their package.
+
+** Built-in file browser
+
+The editor comes with a built-in file browser which uses sections to get their files from. This works as follows:
+
+ * Make sure you have a section for your downloads, with at least one field of the type 'File Upload'.
+ * Select this section (and perhaps some more) in your preferences panel to be available for CKEditor.
+ * Now if you use the 'browse server'-button in CKEditor, you can select your section and the specific entry/file to insert in your text. You can also add new entries with the file manager on the fly!

@@ -4,6 +4,7 @@ jQuery(document).ready(function () {
     jQuery('label > textarea.ckeditor').each(function(index) {
         var objectName = jQuery(this).attr('name');    
         var configurationData = {
+            language : 'en',            
             height : this.offsetHeight,
             extraPlugins : 'uicolor,xmlentities',
             removePlugins : 'font,entities,styles',
@@ -20,7 +21,8 @@ jQuery(document).ready(function () {
                 ['HorizontalRule'],
                 ['Source', 'Maximize']
             ],
-            forcePasteAsPlainText: true
+            forcePasteAsPlainText: true,
+            filebrowserBrowseUrl: '/symphony/extension/ckeditor/filebrowser/'
         };
         CKEDITOR.replaceByClassEnabled = false;
         CKEDITOR.replace(objectName, configurationData);
