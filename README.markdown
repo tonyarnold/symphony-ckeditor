@@ -34,7 +34,7 @@ The version of CKEditor is stripped down to the bare essentials. This means:
  * **All other plugins are removed!**; if you wish to make use of more functionality, download the original version of [CKEditor](http://ckeditor.com) and extract the plugins needed from their package.
  * **All languages other then English are removed!**; if you wish to have additional languages, download the original version of [CKEditor](http://ckeditor.com) and extract the languages needed from their package.
 
-** Built-in file browser
+## Built-in file browser
 
 The editor comes with a built-in file browser which uses sections to get their files from. This works as follows:
 
