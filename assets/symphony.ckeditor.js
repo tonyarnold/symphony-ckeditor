@@ -17,11 +17,12 @@ jQuery(document).ready(function () {
                 ['Format'],
                 ['Bold', 'Italic', 'Strike', '-', 'Subscript', 'Superscript'],
                 ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', 'Blockquote'],
-                ['Link', 'Unlink'],
+                ['Image'],['Link', 'Unlink'],
                 ['HorizontalRule'],
                 ['Source', 'Maximize']
             ],
             forcePasteAsPlainText: true,
+            format_tags: 'p;h1;h2;h3',
             filebrowserBrowseUrl: '/symphony/extension/ckeditor/filebrowser/'
         };
         CKEDITOR.replaceByClassEnabled = false;
