@@ -40,13 +40,13 @@ The version of CKEditor is stripped down to the bare essentials. This means:
    * Horizontal rule
    * View source
    * Full screen
- * **All other plugins are removed!**; if you wish to make use of more functionality, download the original version of [CKEditor](http://ckeditor.com) and extract the plugins needed from their package.
- * **All languages other then English are removed!**; if you wish to have additional languages, download the original version of [CKEditor](http://ckeditor.com) and extract the languages needed from their package.
+ * *Most of CKEditor's plug-ins have been removed*: if you wish to add more plug-ins, please download the original [CKEditor](http://ckeditor.com) package and extract the plugins you'd like to include.
+ * *All languages other than US English are removed*: If you wish to make use of additional languages, please download the original version of [CKEditor](http://ckeditor.com) and extract the languages you'd like to include.
 
 ## Built-in file browser
 
 The editor comes with a built-in file browser which uses sections to get their files from. This works as follows:
 
  * Make sure you have created a section for your uploaded files ('Downloads' is a good name), with a 'File Upload' field attached;
- * Select the new section in your preferences panel to be available for CKEditor.
- * Now if you use the 'browse server'-button in CKEditor, you can select your section and the specific entry/file to insert in your text. You can also add new entries with the file manager on the fly!
+ * Got to Symphony's System Preferences to make the CKEditor file browser available to your new section, and any existing sections.
+ * Once you've enabled the file browser for your section, any time you make use of the 'Browse Server' button in CKEditor, you can select existing files from your available sections and add them to the entry you are editing. You can also upload new files using the file browser on the fly!
