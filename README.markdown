@@ -1,11 +1,11 @@
 # CKEditor for Symphony CMS
 
- * Version: 1.00 beta
+ * Version: 1.0
  * CKEditor version: 3.4.1
- * Date: 07-10-2010
- * Authors: Tony Arnold <tony@tonyarnold.com>, Giel Berkers <info@gielberkers.com>
- * Repository: <http://github.com/tonyarnold/symphony-ckeditor/>, <http://github.com/kanduvisla/symphony-ckeditor/>
- * Requirements: Symphony CMS 2.0.8 <http://github.com/symphony/symphony-2/tree/master>
+ * Date: 01-11-2010
+ * Authors: Tony Arnold <tony@thecocoabots.com>
+ * Repository: <http://github.com/tonyarnold/symphony-ckeditor/>
+ * Requirements: Symphony CMS 2.1.0 or higher <http://github.com/symphony/symphony-2/tree/master>
 
 ## Introduction
 
@@ -13,6 +13,15 @@ This extension provides [CKEditor](http://ckeditor.com/) as text-formatter for S
 For further information about the editor please visit [www.ckeditor.com](http://ckeditor.com/).
 
 It is based upon code found in [Nils H&ouml;rrmann's WYMEditor](http://github.com/nilshoerrmann/wymeditor).
+
+## Contributors
+
+Significant work and bug fixes have been contributed by the following users:
+
+ * Rob Stanford 
+ * Giel Berkers - <http://github.com/kanduvisla>
+ 
+For full details, please see the Github commit log - <http://github.com/tonyarnold/symphony-ckeditor/commits/master>.
 
 ## Special notes
 

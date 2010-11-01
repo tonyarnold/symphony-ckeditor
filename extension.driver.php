@@ -9,10 +9,12 @@
 		public function about() {
 			return array(
 				'name' => 'Text Formatter: CKEditor',
-				'version' => '1.00',
-				'release-date' => '2010-10-07',
+				'version' => '1.0',
+				'release-date' => '2010-11-01',
 				'author' => array(
-					'name' => '<a href="http://thecocoabots.com">Tony Arnold</a> / <a href="http://www.gielberkers.com">Giel Berkers</a>'
+					'name'     => 'Tony Arnold',
+					'website'  => 'http://thecocoabots.com',
+					'email'    => 'tony@thecocoabots.com'
 				),
 				'description' => 'Includes CKEditor, a web-based XHTML editor developed by Frederico Knabben. It also has an integrated file browser which uses Symphony sections to get it\'s files from.'
 			);

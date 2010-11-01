@@ -5,8 +5,8 @@
 		function about(){
 			return array(
 				'name' => 'CKEditor',
-				'version' => '0.6',
-				'release-date' => '2009-12-08',
+				'version' => '1.0',
+				'release-date' => '2010-11-01',
 				'author' => array(
 					'name' => 'Tony Arnold',
 					'website' => 'http://thecocoabots.com',
