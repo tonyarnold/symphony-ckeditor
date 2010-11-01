@@ -72,7 +72,7 @@
 				}				
 				$left->appendChild($list);
 			} else {
-				$left->appendChild(new XMLElement('p', __('There are no sections selected to show here. Please select which sections are available for CKEditor in the preferences panel.')));
+				$left->appendChild(new XMLElement('p', __('There are no sections available. Please select which sections are permitted to use the CKEditor file upload feature in the Symphony System Preferences.')));
 			}
 			$this->Form->appendChild($left);
 			$this->Form->appendChild($right);

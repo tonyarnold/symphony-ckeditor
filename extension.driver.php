@@ -51,8 +51,8 @@
 			$wrapper = $context['wrapper'];
 			
 			$fieldset = new XMLElement('fieldset', '', array('class'=>'settings'));
-			$fieldset->appendChild(new XMLElement('legend', __('CKEditor')));
-			$fieldset->appendChild(new XMLElement('p', __('The following sections are allowed in the file manager of CKEditor:')));
+			$fieldset->appendChild(new XMLElement('legend', __('CKEditor File Browser')));
+			$fieldset->appendChild(new XMLElement('p', __('Please select the sections that are permitted to use the CKEditor file browser:')));
 			
 			$sectionManager = new SectionManager($this);
 			$sections = $sectionManager->fetch();
@@ -71,7 +71,7 @@
 				$label->appendChild(new XMLElement('input', $section->get('name'), $attributes));
 				$fieldset->appendChild($label);
 			}
-			
+
 			$wrapper->appendChild($fieldset);
 		}
 		
