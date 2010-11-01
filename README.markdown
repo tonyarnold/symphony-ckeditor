@@ -25,9 +25,9 @@ For full details, please see the Github commit log - <http://github.com/tonyarno
 
 ## Special notes
 
-The version of CKEditor is stripped down to the bare essentials. This means:
+The version of CKEditor included with this Symphony extension is stripped down to the bare essentials. This means:
 
- * Text formatting is limited to the following functionality:
+ * Text formatting is limited to the following functions:
    * Paragraph Format
    * Bold
    * Italic
@@ -45,8 +45,8 @@ The version of CKEditor is stripped down to the bare essentials. This means:
 
 ## Built-in file browser
 
-The editor comes with a built-in file browser which uses sections to get their files from. This works as follows:
+This Symphony extension comes with a built-in file browser that is compatible with CKEditor. This file browser uses Symphony sections to store and retrieve uploaded files. It works as follows:
 
- * Make sure you have created a section for your uploaded files ('Downloads' is a good name), with a 'File Upload' field attached;
- * Got to Symphony's System Preferences to make the CKEditor file browser available to your new section, and any existing sections.
- * Once you've enabled the file browser for your section, any time you make use of the 'Browse Server' button in CKEditor, you can select existing files from your available sections and add them to the entry you are editing. You can also upload new files using the file browser on the fly!
+ * Make sure you have created at least one section for your uploaded files with a 'File Upload' field attached;
+ * Go to Symphony's System Preferences and make the CKEditor file browser available to one or more of your sections;
+ * Once you've enabled the file browser for at least one of your sections, you make use of the 'Browse Server' button in CKEditor to select existing files from within your section and add them to the entry you are editing. You can also upload new files using the file browser on the fly!
